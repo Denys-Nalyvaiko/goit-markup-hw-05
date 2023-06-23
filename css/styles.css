@@ -491,13 +491,13 @@ button {
 
 .footer-form {
   display: flex;
+  gap: 24px;
 }
 
 .footer-input {
   width: 264px;
   height: 40px;
   padding-left: 16px;
-  margin-right: 24px;
   border-radius: 4px;
   border: 1px solid var(--white-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -675,7 +675,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -720,7 +720,6 @@ button {
 }
 
 .modal-text {
-  padding-top: 48px;
   color: var(--dark-color);
   text-align: center;
   font-size: 16px;
@@ -731,11 +730,11 @@ button {
 }
 
 .modal-label {
-  display: inline-block;
+  display: block;
   margin-bottom: 4px;
   color: var(--subtle-text-color);
   font-size: 12px;
-  line-height: 1.16; /* 14/12 */
+  line-height: 1.17; /* 14/12 */
   letter-spacing: 0.48px;
 }
 
@@ -754,6 +753,8 @@ button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
   transition: border-color var(--transition);
+  background-color: transparent;
+  outline: transparent;
 }
 
 .icon-modal-input {
@@ -774,12 +775,23 @@ button {
 }
 
 .modal-textarea {
-  padding-top: 8px;
-  padding-left: 16px;
+  padding: 8px 16px;
   width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  border: 1px solid var(rgba(46, 47, 66, 0.4));
+  background-color: transparent;
+  outline: transparent;
+  resize: none;
+  transition: border-color var(--transition);
+}
+
+.modal-textarea:focus {
+  border-color: var(--primary-brand-color);
 }
 
 .modal-field-textarea {
@@ -793,6 +805,10 @@ button {
   letter-spacing: 0.48px;
 }
 
+.modal-field-checkbox {
+  margin-bottom: 24px;
+}
+
 .checkbox-text {
   color: var(--subtle-text-color);
   font-size: 12px;
@@ -800,7 +816,7 @@ button {
   letter-spacing: 0.48px;
 }
 
-.checkbox-text span {
+.checkbox-text .check-box-span {
   width: 16px;
   height: 16px;
   border-radius: 2px;
@@ -810,7 +826,7 @@ button {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
-  margin-bottom: 24px;
+  transition: background-color var(--transition);
 }
 
 .modal-privacy-link {
@@ -842,6 +858,7 @@ button {
   letter-spacing: 0.64px;
   display: block;
   margin: 0 auto;
+  transition: background-color var(--transition);
 }
 
 .modal-submit-btn:hover,
