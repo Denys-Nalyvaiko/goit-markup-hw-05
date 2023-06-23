@@ -500,9 +500,12 @@ button {
   padding-left: 16px;
   border-radius: 4px;
   border: 1px solid var(--white-color);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.15));
   color: var(--white-color);
   background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .footer-input::placeholder {
@@ -522,7 +525,6 @@ button {
   height: 40px;
   background-color: var(--primary-brand-color);
   border-radius: 4px;
-  gap: 16px;
   padding: 8px 24px;
   font-family: inherit;
   color: var(--white-color);
@@ -533,6 +535,7 @@ button {
 
 .subscribe-icon {
   fill: var(--white-color);
+  margin-left: 16px;
 }
 
 .footer-submit-btn:hover,
@@ -812,7 +815,7 @@ button {
 .checkbox-text {
   color: var(--subtle-text-color);
   font-size: 12px;
-  line-height: 1.16; /* 14/12 */
+  line-height: 1.17;
   letter-spacing: 0.48px;
 }
 
@@ -826,7 +829,8 @@ button {
   justify-content: center;
   fill: transparent;
   margin-right: 8px;
-  transition: background-color var(--transition);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
 }
 
 .modal-privacy-link {
